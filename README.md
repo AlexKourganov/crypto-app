@@ -1,3 +1,21 @@
+# Social Networking App :iphone:
+<p align="center">
+  <img src="https://i.ibb.co/xjd41T6/Crypto-App.png">
+</p>
+
+## Technologies
+
+<img src="https://icon-library.com/images/react-icon/react-icon-29.jpg" width="50" height="50" /> <img src="https://cdn.iconscout.com/icon/free/png-512/node-js-1174925.png" width="50" height="50" /> <img src="https://styled-components.com/atom.png" width="50" height="50" /> <img src="https://cdn.iconscout.com/icon/free/png-512/redux-283024.png" width="50" height="50" /> <img src="https://img.icons8.com/color/452/firebase.png" width="50" height="50" />
+
+
+
+REACT/NODEJS/STYLED COMPONENTS/REDUX/FIREBASE
+
+## Summary
+A Social Networking App that uses styled components for styling. Redux for state managment and Firebase for backend and hosting.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
