@@ -5,11 +5,11 @@
 
 ## Technologies
 
-<img src="https://icon-library.com/images/react-icon/react-icon-29.jpg" width="50" height="50" /> <img src="https://cdn.iconscout.com/icon/free/png-512/node-js-1174925.png" width="50" height="50" /> <img src="https://styled-components.com/atom.png" width="50" height="50" /> <img src="https://cdn.iconscout.com/icon/free/png-512/redux-283024.png" width="50" height="50" /> <img src="https://img.icons8.com/color/452/firebase.png" width="50" height="50" />
+<img src="https://icon-library.com/images/react-icon/react-icon-29.jpg" width="50" height="50" /> <img src="https://gw.alipayobjects.com/zos/antfincdn/nc7Fc0XBg5/8a6844f5-a6ed-4630-9177-4fa5d0b7dd47.png" width="50" height="50" /> <img src="https://cdn.iconscout.com/icon/free/png-512/redux-283024.png" width="50" height="50" /> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVuQnLFx-6OZdvpvxk8ICACTD8SQI4-NRrIQ&usqp=CAU" width="50" height="50" />
 
 
 
-REACT/NODEJS/STYLED COMPONENTS/REDUX/FIREBASE
+REACT/ANTD/REDUX/RAPIDAPI
 
 ## Summary
 A Social Networking App that uses styled components for styling. Redux for state managment and Firebase for backend and hosting.
