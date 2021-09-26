@@ -9,7 +9,7 @@
 
 
 
-REACT/ANTD/REDUX/RAPIDAPI/
+REACT/ANTD/REDUX/RAPIDAPI/GRAPHJS
 
 ## Summary
 A Crypto Tracking app that shows most popular crypto, data about it, news related to them, and plots data using graph js.
