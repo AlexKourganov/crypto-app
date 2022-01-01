@@ -5,8 +5,12 @@ const cryptoApiHeaders = {
   "x-rapidapi-key":process.env.REACT_APP_CRYPTO_API_COIN_KEY
 };
 
-
+console.log(process.env.REACT_APP_CRYPTO_API_COIN_URL);
 const baseUrl = process.env.REACT_APP_CRYPTO_API_COIN_URL;
+
+ const currentDate = Math.round((new Date().getTime()) / 1000);
+ 
+
 
 const createRequest = (url) => ({
   url,
@@ -18,13 +22,16 @@ export const cryptoApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl }),
   endpoints: (builder) => ({
     getCryptos: builder.query({
-      query: (count) => createRequest(`/coins?limit=${count}`),
+      query: (count) => createRequest(`/coins/markets?vs_currency=usd&per_page=${count}`),
+    }),
+    getCryptosGlobal: builder.query({
+      query: () => createRequest(`/global`),
     }),
     getCryptoDetails: builder.query({
-      query: (coinId) => createRequest(`/coin/${coinId}`),
+      query: (coinId) => createRequest(`/coins/${coinId}`),
     }),
     getCryptoHistory: builder.query({
-      query: ({coinId,timePeriod}) => createRequest(`/coin/${coinId}/history/${timePeriod}`),
+      query: ({coinId,timePeriod}) => createRequest(`/coins/${coinId}/market_chart/range?vs_currency=usd&from=${timePeriod}&to=${currentDate}`),
     }),
     getExchanges: builder.query({
       query: () => createRequest('/exchanges'),
@@ -34,4 +41,4 @@ export const cryptoApi = createApi({
 });
 
 // Use same name as defined in endpoint but add use and query on both ends
-export const { useGetCryptosQuery,useGetCryptoDetailsQuery, useGetCryptoHistoryQuery,useGetExchangesQuery } = cryptoApi;
+export const { useGetCryptosQuery,useGetCryptoDetailsQuery, useGetCryptoHistoryQuery,useGetExchangesQuery, useGetCryptosGlobalQuery } = cryptoApi;

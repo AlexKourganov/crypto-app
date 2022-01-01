@@ -13,14 +13,17 @@ const Cryptocurrencies = ({simplified}) => {
     const [cryptos,setCryptos] = useState([]);
     const [searchTerm,setSearchTerm] = useState('');
 
+
+    
+
     useEffect(() => {
         // setCryptos(cryptosList?.data?.coins);
-        const filteredData = cryptosList?.data?.coins.filter((coin)=>coin.name.toLowerCase().includes(searchTerm.toLowerCase()));
+        const filteredData = cryptosList?.filter((coin)=>coin.name.toLowerCase().includes(searchTerm.toLowerCase()));
 
         setCryptos(filteredData)
         
     }, [cryptosList,searchTerm])
-
+    console.log(cryptos)
     if(isFetching) return <Loader />;
     
 // gutter is space between object left right top and bottom
@@ -37,13 +40,14 @@ const Cryptocurrencies = ({simplified}) => {
                 {cryptos?.map((currency)=>(
                     <Col xs={24} sm={12} lg={6} className="crypto-card" key={currency.id}>
                         <Link to={`/crypto/${currency.id}`}>
-                            <Card title={`${currency.rank}. ${currency.name}`}
-                                  extra={<img className="crypto-image" src={currency.iconUrl}/>}  
+                            <Card title={`${currency.market_cap_rank}. ${currency.name}`}
+                                  extra={<img className="crypto-image" src={currency.image}/>}  
                                   hoverable
                             >
-                                <p>Price: {millify(currency.price)}</p>
-                                <p>Market Cap: {millify(currency.marketCap)}</p>
-                                <p>Daily Change: {millify(currency.change)}%</p>
+                                <p>Price: {(typeof(currency.current_price) !== 'undefined' && (currency.current_price) != null) ?   `$ ${millify(currency.current_price)}` : `N/A`}</p>
+                                <p>Market Cap: {(typeof(currency.market_cap) !== 'undefined' && (currency.market_cap) != null) ?   `$ ${millify(currency.market_cap)}` : `N/A`}</p>
+                               
+                                <p>Daily Change: { (typeof(currency.price_change_percentage_24h) !== 'undefined' && (currency.price_change_percentage_24h) != null) ?   `$ ${millify(currency.price_change_percentage_24h)}` : `N/A`}%</p>
                             </Card>
                         </Link>
                     </Col>
