@@ -1,6 +1,6 @@
 # Crypto Tracking APP :iphone:
 <p align="center">
-  
+  <img src="https://i.ibb.co/xjd41T6/Crypto-App.png">
 </p>
 
 ## Technologies
