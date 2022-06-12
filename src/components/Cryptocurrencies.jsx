@@ -23,7 +23,7 @@ const Cryptocurrencies = ({simplified}) => {
         setCryptos(filteredData)
         
     }, [cryptosList,searchTerm])
-    console.log(cryptos)
+   
     if(isFetching) return <Loader />;
     
 // gutter is space between object left right top and bottom

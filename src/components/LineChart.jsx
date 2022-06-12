@@ -7,7 +7,7 @@ const {Title} = Typography;
 const LineChart = ({coinHistory,currentPrice,coinName}) => {
     const coinPrice=[];
     const coinTimestamp=[];
-    console.log(coinHistory)
+   
 
     for (let i=0; i<coinHistory?.prices?.length;i++){
         coinPrice.push(coinHistory.prices[i][1]);

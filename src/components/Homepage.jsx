@@ -19,15 +19,15 @@ const Homepage = () => {
     useGetCryptosGlobalQuery();
 
   const globalStats = globalData?.data;
-  console.log(globalStats);
+  
 
   if (isFetching && isFetchingGlobal) {
-    console.log(`Loader Hit`);
+    
     return <Loader />;
   }
 
   if (globalStats === "undefined") {
-    console.log(`global hit`);
+   
     return <div>WOOOPS!</div>;
   }
 
