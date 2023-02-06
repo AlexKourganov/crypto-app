@@ -8,7 +8,7 @@ import {
   Exchanges,
   Cryptocurrencies,
   CryptoDetails,
-  News,
+ 
 } from "./components";
 
 import "./App.css";
